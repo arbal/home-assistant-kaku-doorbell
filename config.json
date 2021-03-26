@@ -1,0 +1,38 @@
+{
+  "name": "RTL_433 to MQTT Bridge - KAKU ACDB-7000A",
+  "version": "0.3.5",
+  "slug": "rtl4332mqtt",
+  "description": "433MHz RF to MQTT Bridge based on RTL_SDR/RTL_433 for RTL2832U based DVB-T USB tuners. Specifcally tuned for ACDB-7000A doorbell. Taken from https://github.com/james-fry/hassio-addons/tree/master/rtl4332mqtt.",
+  "url": "https://github.com/james-fry/hassio-addons/tree/master/rtl4332mqtt",
+  "startup": "before",
+  "boot": "auto",
+  "map": ["config:rw", "ssl"],
+  "usb": true,
+  "host_network": "False",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7",
+    "i386"
+  ],
+  "options":
+  {
+    "mqtt_host": "127.0.0.1",
+    "mqtt_user": "homeassistant",
+    "mqtt_password": "homeassistant",
+    "mqtt_topic": "homeassistant/sensor/doorbell",
+    "protocol": 96,
+    "frequency": 319500000,
+    "deviceid": 30755554
+  },
+  "schema":
+  {
+    "mqtt_host": "str",
+    "mqtt_user": "str",
+    "mqtt_password": "str",
+    "mqtt_topic": "str",
+    "protocol": "int",
+    "frequency": "int",
+    "deviceid": "int"
+   }
+}
