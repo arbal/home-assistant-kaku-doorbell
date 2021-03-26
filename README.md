@@ -1,14 +1,14 @@
 # RTL433 to MQTT Bridge hass.io addon
 A hass.io addon for a software defined radio tuned to listen for 433MHz RF transmissions and republish the data via MQTT
 
-This hass.io addon is based on Chris Kacerguis' project here: https://github.com/chriskacerguis/honeywell2mqtt,
+This hass.io addon is based on https://github.com/james-fry/hassio-addons/tree/master/rtl4332mqtt, which is in turn based on Chris Kacerguis' project here: https://github.com/chriskacerguis/honeywell2mqtt,
 which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.com/roflmao/rtl2mqtt
 
 Modified by Gerrit-Jan de Bruin to work specifically for the KAKU ACDB-7000A (https://klikaanklikuit.nl/product/draadloze-drukknop/).
 
 ## Usage
 
-1) Install the addon.
+1) Install the addon: `git clone https://github.com/gerritjandebruin/home-assistant-kaku-doorbell.git /addons` or by Supervisor -> Add-on Store -> Options -> Repositories -> Add https://github.com/gerritjandebruin/home-assistant-kaku-doorbell.git.
 
 2) Use addon configuration to configure:
 - mqtt_host (default localhost)
