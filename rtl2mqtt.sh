@@ -42,6 +42,6 @@ do
   # Create file with touch /tmp/rtl_433.log if logging is needed
   [ -w /tmp/rtl_433.log ] && echo $line >> rtl_433.log
   if [ "$DEVICEID_RECEIVED" -eq "$DEVICEID" ]; then
-    echo $line | /usr/bin/mosquitto_pub -h $MQTT_HOST -u $MQTT_USER -P $MQTT_PASS -i RTL_433 -r -l -t $MQTT_PATH
+    echo $line | /usr/bin/mosquitto_pub -h $MQTT_HOST -u $MQTT_USER -P $MQTT_PASS -i RTL_433 -l -t $MQTT_PATH
   fi
 done
